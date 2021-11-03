@@ -1,0 +1,23 @@
+.outer-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    height: 100vh;
+
+}
+
+.inner-home{
+    width: 80vw;
+    margin: auto;
+    padding: 40px;
+    background-color:  #0F083D;
+    border-radius: 120px;
+
+
+}
+h1, p{
+    color: white;
+
+}

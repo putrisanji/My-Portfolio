@@ -1,0 +1,16 @@
+.navigasi{
+    position: fixed;
+    background-color: #0F083D;
+    opacity: 0.8;
+    z-index: 100;
+
+}
+.justify-content-end{
+    margin: 0.3rem;
+    padding-bottom: 0.3rem;
+    color: white;
+
+}
+/* .nav{
+    margin: 0px;
+} */

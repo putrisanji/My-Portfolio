@@ -1,0 +1,8 @@
+.outer-contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    height: 20vh;
+}
