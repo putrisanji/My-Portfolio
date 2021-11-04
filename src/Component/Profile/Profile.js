@@ -6,7 +6,7 @@ import "./Profile.css";
 
 function Profile() {
   return (
-    <div className="outer-profile">
+    <div  id="profile" className="outer-profile">
       <div className="container-left" >
         <Card.Title style={{color: "white"}}>Lorem ipsum</Card.Title>
         <Card.Text style={{color: "white"}}>

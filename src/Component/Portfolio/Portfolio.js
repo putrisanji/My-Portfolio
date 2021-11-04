@@ -35,7 +35,7 @@ const Data = [
 
 function Portfolio() {
   return (
-    <div className="outer-portfolio">
+    <div id="portfolio" className="outer-portfolio">
       {Data.map((card) => {
         return (
           <Card style={{ width: "18rem", backgroundColor: "#0F083D" }}>

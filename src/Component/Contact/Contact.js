@@ -37,7 +37,7 @@ const socialMedia = [
 
 function Contact() {
   return (
-    <div className="outer-contact">
+    <div id="contact" className="outer-contact">
       {socialMedia.map((icon) => {
         return (
           <div className="mySosmed">
