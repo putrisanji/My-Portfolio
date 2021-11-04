@@ -1,28 +1,36 @@
 import React from "react";
 import { Container, Nav } from "react-bootstrap";
+import { Link } from "react-scroll";
 
-import "./Navbar.css"
+import "./Navbar.css";
 
 const Navbar = () => {
-  return ( 
+  return (
     <Container fluid className="navigasi">
       <Nav className="justify-content-end">
         <Nav.Item>
-          <Nav.Link href="#" style={{color: "white"}}>Home</Nav.Link>
+          <Link to="home" style={{ color: "white", marginRight:'1.5rem', cursor: "default"}}>
+            Home
+          </Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="#" style={{color: "white"}}>Profile</Nav.Link>
+          <Link to="profile" style={{ color: "white", marginRight:'1.5rem', cursor: "default" }}>
+            Profile
+          </Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="#" style={{color: "white"}}>Portfolio</Nav.Link>
+          <Link to="portfolio" style={{ color: "white", marginRight:'1.5rem', cursor: "default" }}>
+            Portfolio
+          </Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="#" style={{color: "white"}}>Contact</Nav.Link>
+          <Link to="contact" style={{ color: "white", marginRight:'1.5rem', cursor: "default" }}>
+            Contact
+          </Link>
         </Nav.Item>
       </Nav>
     </Container>
-
   );
 };
 
-export default Navbar
+export default Navbar;

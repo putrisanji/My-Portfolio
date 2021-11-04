@@ -9,11 +9,12 @@ import Contact from "../Component/Contact/Contact";
 function Layout() {
   return (
     <>
-      <Navbar />
-      <Home />
-      <Profile />
-      <Portfolio />
-      <Contact />
+        <Navbar/>
+        <Home/>
+        <Profile/>
+        <Portfolio/>
+        <Contact/>
+
     </>
   );
 }
