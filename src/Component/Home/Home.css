@@ -1,23 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solway:wght@400;800&family=Sora:wght@600&display=swap');
+
+
 .outer-home{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: auto;
-    height: 100vh;
-
+    height: 78vh;
+    background-color:#001e3c;;
 }
 
 .inner-home{
-    width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin: auto;
-    padding: 40px;
-    background-color:  #0F083D;
-    border-radius: 120px;
-
-
 }
-h1, p{
+.inner-home h1{
+    font-size: 98px;
     color: white;
+    font-family: 'Solway', serif;
 
 }
+.inner-home p {
+    font-size: 30px;
+    color: whitesmoke;
+    font-family: 'Sora', sans-serif;
+
+}
+.inner-home Button{
+   width: 8rem;
+   border-radius: 100px;
+   align-items: center;
+}
+
