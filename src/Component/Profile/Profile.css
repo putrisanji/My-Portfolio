@@ -1,29 +1,12 @@
 .outer-profile{
     display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: row;
+    justify-content:center;
+    flex-direction: column;
     margin: auto;
     height: 100vh;
 }
-
-.container-left{
-    border-radius: 0 100px 100px 0;
-    text-align: left;
-    padding: 30px;
-    margin-right: 10vw;
-    background-color: #0F083D;
-
-
+.nav{
+    justify-content: center;
 }
-
-.container-right{
-    border-radius: 120px 0 0 120px;
-    text-align: right;
-    padding: 30px;
-    margin-left: 10vw;
-    background-color: #0F083D;
-}
-
 
 

@@ -1,31 +1,76 @@
-import React from "react";
-import {Card} from "react-bootstrap"
+import React, {useState} from "react";
+import { Nav } from "react-bootstrap";
 
-import ProfileFoto from "../../Asset/Images/bb_2.png"
+import ProfileFoto from "../../Asset/Images/bb_2.png";
 import "./Profile.css";
 
 function Profile() {
+  const [showInitial, setShowInitial]=useState(true)
+  const [showProfil, setShowProfil]=useState(false)
+  const [showEducation, setShowEducation]= useState(false)
+  const [showExperiance, setShowExperiance] = useState(false)
+
+  const handleProfile = ()=>{
+    setShowInitial(false)
+    setShowProfil(true)
+    setShowExperiance(false)
+    setShowEducation(false)
+  }
+  const handleEducation = ()=>{
+    setShowInitial(false)
+    setShowProfil(false)
+    setShowExperiance(false)
+    setShowEducation(true)
+    console.log(1)
+  }
+  const handleExperiance=()=>{
+    setShowInitial(false)
+    setShowProfil(false)
+    setShowEducation(false)
+    setShowExperiance(true)
+    console.log(2)
+  }
+
   return (
-    <div  id="profile" className="outer-profile">
-      <div className="container-left" >
-        <Card.Title style={{color: "white"}}>Lorem ipsum</Card.Title>
-        <Card.Text style={{color: "white"}}>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Pellentesque habitant morbi tristique senectus
-          et netus et malesuada fames ac turpis egestas.
-        </Card.Text>
-      </div>
-      <div className="image-profile">
-        <Card.Img src={ProfileFoto} style={{width:"20vw", height:"50vh"}}></Card.Img>
-      </div>
-      <div className="container-right" >
-        <Card.Title style={{color: "white"}}>Lorem ipsum</Card.Title>
-        <Card.Text style={{color: "white"}}>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Pellentesque habitant morbi tristique
-          senectus et netus et malesuada fames ac turpis egestas.
-        </Card.Text>
-      </div>
+    <div id="profile" className="outer-profile">
+      <div className="container">
+        <div className="navigation">
+          <Nav>
+            <Nav.Item>
+              <Nav.Link onClick={handleProfile}>Profile</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link onClick={handleEducation}>Education</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link onClick={handleExperiance}>Experiance</Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </div>
+        <div className="description">
+          {
+            showInitial ? (
+              <div>
+                <p>hallo wold</p>
+              </div>
+            ): 
+            showProfil ? (
+              <div>
+                <p>hallo profile</p>
+              </div>
+            ):
+            showEducation ? (
+              <div>
+              <p>hallo Edu</p>
+            </div>
+            ): showExperiance && (
+              <div>
+              <p>hallo Experiance</p>
+              </div>
+            )
+          }
+        </div>
+        </div>
     </div>
   );
 }
