@@ -1,62 +1,70 @@
-import React from "react";
-import { Card, Button, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Card, Button, Row, Col, Modal } from "react-bootstrap";
+import { BsChevronRight } from "react-icons/bs";
+import { icons } from "react-icons/lib";
 
 import "./Portfolio.css";
-
-const Data = [
-  {
-    id: "1",
-    image:
-      "https://asset.kompas.com/crops/JYEA-DAQ7T5po68HssUxdS1YXSw=/106x0:1071x643/750x500/data/photo/2021/07/04/60e1d6599f6e7.png",
-    title: "my Porto",
-    text: "Coba-coba",
-    git: "#",
-    web: "#",
-  },
-  {
-    id: "1",
-    image:
-      "https://d1bpj0tv6vfxyp.cloudfront.net/articles/314611_4-11-2020_13-9-40.webp",
-    title: "my Porto",
-    text: "Coba-coba",
-    git: "#",
-    web: "#",
-  },
-  {
-    id: "1",
-    image:
-      "https://cdn1.katadata.co.id/media/images/thumb/2021/09/15/Shiba_Inu-2021_09_15-11_07_53_9c277d9ea6b59443f00933c51e935562_620x413_thumb.jpg",
-    title: "my Porto",
-    text: "Coba-coba",
-    git: "#",
-    web: "#",
-  },
-];
+import Data from "./Data";
+import { getByDisplayValue } from "@testing-library/react";
 
 function Portfolio() {
+  const [showModal, setShowModal] = useState(false);
+
+  const getModal = Value =>{
+    setShowModal(Value)
+  }
+
+
+
+
+
   return (
     <div id="portfolio" className="outer-portfolio">
-      {Data.map((card) => {
+      {Data.map((card, key) => {
         return (
-          <Card style={{ width: "18rem", backgroundColor: "#0F083D" }}>
-            <Card.Img variant="top" src={card.image} />
-            <Card.Body>
-              <Card.Title style={{color: "white"}}>{card.title}</Card.Title>
-              <Card.Text style={{color: "white"}}>{card.text}</Card.Text>
-              <Row>
-                <Col>
-                  <Button variant="primary" href={card.git}>
-                    Github
-                  </Button>
-                </Col>
-                <Col>
-                  <Button variant="primary" href={card.web}>
-                    Website
-                  </Button>
-                </Col>
-              </Row>
-            </Card.Body>
-          </Card>
+          <div className="porto">
+            <Card
+              key={key}
+              style={{
+                width: "18rem",
+                height: "30rem",
+                backgroundColor: "#0F083D",
+              }}
+            >
+              <Card.Img src={card.image} style={{ height: "25rem" }} />
+              <Card.Body>
+                {/* <Card.Title style={{color: "white"}}>{card.title}</Card.Title>
+              <Card.Text style={{color: "white"}}>{card.text}</Card.Text> */}
+                <Row>
+                  <Col>
+                    <Button variant="link" onClick={() => getModal(card.id)}>
+                      Learn More{" "}
+                      <span>
+                        <BsChevronRight />
+                      </span>
+                    </Button>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+            {showModal && (
+            <Modal
+              show={showModal === card.id}
+              onHide={() => setShowModal(false)}
+              dialogClassName="modal-90w"
+              aria-labelledby="example-custom-modal-styling-title"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title>
+                  {card.title}
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <p>hallo</p>
+              </Modal.Body>
+            </Modal>
+            )}
+          </div>
         );
       })}
     </div>
