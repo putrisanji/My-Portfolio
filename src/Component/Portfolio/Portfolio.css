@@ -1,8 +1,17 @@
 .outer-portfolio{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    
+}
+.porto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
     align-items: center;
-    flex-direction: row;
-    margin: auto;
-    height: 100vh;
+    width:30%;
+    height: 20rem;
+}
+.card-img{
+    height: 80%;
 }

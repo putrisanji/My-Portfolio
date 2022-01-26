@@ -1,38 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Solway:wght@400;800&family=Sora:wght@600&display=swap');
 
+.home{
+    height: 41em }
 
 .outer-home{
+    height: 33em;
+    background-color:#001e3c;
+    background-size: cover;
     display: flex;
+    padding-top: 10vh;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin: auto;
-    height: 78vh;
-    background-color:#001e3c;;
+    align-items: center;
 }
 
-.inner-home{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-}
-.inner-home h1{
-    font-size: 98px;
+.outer-home h1{
+    font-size: 5rem;
     color: white;
     font-family: 'Solway', serif;
 
 }
-.inner-home p {
-    font-size: 30px;
+.outer-home p {
+    font-size: 1.8rem;
     color: whitesmoke;
     font-family: 'Sora', sans-serif;
+    
 
 }
-.inner-home Button{
+.outer-home Button{
+    margin-top: 1.5rem;
    width: 8rem;
    border-radius: 100px;
    align-items: center;
 }
+.tools{
+    background-color: #c2e0ff;
+    height: 8em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 
+}
+
+.icon{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .home{
+        height: 65em }
+    .outer-home{
+        height: 55em;
+    }
+    
+    .tools{
+        height: 10em;
+    } 
+
+}
+@media only screen and (max-width: 400px) {
+    .home{
+        height: 53em }
+    .outer-home{
+        height: 47em;
+    }
+    
+    .tools{
+        height: 6em;
+    } 
+    .outer-home h1{
+        font-size: 5rem;
+    
+    }
+    .outer-home p {
+        font-size: 1.8rem;
+    
+    }
+
+}

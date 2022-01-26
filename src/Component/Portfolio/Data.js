@@ -1,10 +1,10 @@
+import BRILink from "../../Asset/Images/BRI2.png"
 
 const Data = [
     {
       id: "1",
-      image:
-        "https://asset.kompas.com/crops/JYEA-DAQ7T5po68HssUxdS1YXSw=/106x0:1071x643/750x500/data/photo/2021/07/04/60e1d6599f6e7.png",
-      title: "my Porto1",
+      image: BRILink,
+      title: "BRILink Antar Jemput",
       imageA: "#",
       imageB: "#",
       imageC: '#',
@@ -39,5 +39,44 @@ const Data = [
       textC: 'coba-coba2',
       lernMore: "#"
     },
+    {
+      id: "3",
+      image:
+        "https://cdn1.katadata.co.id/media/images/thumb/2021/09/15/Shiba_Inu-2021_09_15-11_07_53_9c277d9ea6b59443f00933c51e935562_620x413_thumb.jpg",
+      title: "my Porto3",
+      imageA: "#",
+      imageB: "#",
+      imageC: '#',
+      textA: "Coba-coba",
+      textB: 'Coba-coba1',
+      textC: 'coba-coba2',
+      lernMore: "#"
+    },
+    {
+      id: "3",
+      image:
+        "https://cdn1.katadata.co.id/media/images/thumb/2021/09/15/Shiba_Inu-2021_09_15-11_07_53_9c277d9ea6b59443f00933c51e935562_620x413_thumb.jpg",
+      title: "my Porto3",
+      imageA: "#",
+      imageB: "#",
+      imageC: '#',
+      textA: "Coba-coba",
+      textB: 'Coba-coba1',
+      textC: 'coba-coba2',
+      lernMore: "#"
+    },
+    {
+      id: "3",
+      image:
+        "https://cdn1.katadata.co.id/media/images/thumb/2021/09/15/Shiba_Inu-2021_09_15-11_07_53_9c277d9ea6b59443f00933c51e935562_620x413_thumb.jpg",
+      title: "my Porto3",
+      imageA: "#",
+      imageB: "#",
+      imageC: '#',
+      textA: "Coba-coba",
+      textB: 'Coba-coba1',
+      textC: 'coba-coba2',
+      lernMore: "#"
+    }
   ];
 export default Data;  

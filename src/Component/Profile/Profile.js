@@ -1,39 +1,40 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Nav } from "react-bootstrap";
 
-import ProfileFoto from "../../Asset/Images/bb_2.png";
+import Profil from "./myProfile";
+import Education from "./education";
+import Course from "./course";
 import "./Profile.css";
 
 function Profile() {
-  const [showInitial, setShowInitial]=useState(true)
-  const [showProfil, setShowProfil]=useState(false)
-  const [showEducation, setShowEducation]= useState(false)
-  const [showExperiance, setShowExperiance] = useState(false)
+  const [showProfil, setShowProfil] = useState(true);
+  const [showEducation, setShowEducation] = useState(false);
+  const [showCourse, setShowCourse] = useState(false);
 
-  const handleProfile = ()=>{
-    setShowInitial(false)
-    setShowProfil(true)
-    setShowExperiance(false)
-    setShowEducation(false)
-  }
-  const handleEducation = ()=>{
-    setShowInitial(false)
-    setShowProfil(false)
-    setShowExperiance(false)
-    setShowEducation(true)
-    console.log(1)
-  }
-  const handleExperiance=()=>{
-    setShowInitial(false)
-    setShowProfil(false)
-    setShowEducation(false)
-    setShowExperiance(true)
-    console.log(2)
-  }
+  const handleProfile = () => {
+    // setShowInitial(false);
+    setShowProfil(true);
+    setShowCourse(false);
+    setShowEducation(false);
+  };
+  const handleEducation = () => {
+    // setShowInitial(false);
+    setShowProfil(false);
+    setShowCourse(false);
+    setShowEducation(true);
+    console.log(1);
+  };
+  const handleExperiance = () => {
+    // setShowInitial(false);
+    setShowProfil(false);
+    setShowEducation(false);
+    setShowCourse(true);
+    console.log(2);
+  };
 
   return (
     <div id="profile" className="outer-profile">
-      <div className="container">
+      <div className="profil">
         <div className="navigation">
           <Nav>
             <Nav.Item>
@@ -43,34 +44,28 @@ function Profile() {
               <Nav.Link onClick={handleEducation}>Education</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link onClick={handleExperiance}>Experiance</Nav.Link>
+              <Nav.Link onClick={handleExperiance}>Course</Nav.Link>
             </Nav.Item>
           </Nav>
         </div>
         <div className="description">
-          {
-            showInitial ? (
-              <div>
-                <p>hallo wold</p>
-              </div>
-            ): 
-            showProfil ? (
-              <div>
-                <p>hallo profile</p>
-              </div>
-            ):
-            showEducation ? (
-              <div>
-              <p>hallo Edu</p>
+          {showProfil ? (
+            <div>
+              <Profil/>
             </div>
-            ): showExperiance && (
+          ) : showEducation ? (
+            <div>
+              <Education/>
+            </div>
+          ) : (
+            showCourse && (
               <div>
-              <p>hallo Experiance</p>
+                <Course/>
               </div>
             )
-          }
+          )}
         </div>
-        </div>
+      </div>
     </div>
   );
 }

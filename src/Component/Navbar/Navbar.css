@@ -1,7 +1,9 @@
 .navigasi{
     position: fixed;
     background-color: #071a2f;
-    /* opacity: 0.8; */
+    height: 3rem;
+    padding-top: 0.3rem;
+    opacity: 0.8;
     z-index: 100;
 
 }
@@ -11,6 +13,3 @@
     color: white;
 
 }
-/* .nav{
-    margin: 0px;
-} */
